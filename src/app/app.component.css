@@ -1,0 +1,15 @@
+div {
+  background-color: rgba(0, 0, 0, 0.719);
+  padding: 10px;
+  text-align: left;
+  border-radius: 20px;
+}
+p {
+  margin: 0px;
+}
+
+.imagem-planeta {
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
