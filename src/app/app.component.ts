@@ -7,7 +7,7 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
 
-  nome: string = 'Terra';
+  nome: string = '';
   temperatura: number = 15;
   diametro: number = 12.742;
   dia: number = 24;
@@ -16,6 +16,6 @@ export class AppComponent {
   
   ngOnInit() {}
   ClicouNoPlaneta(){
-    this.nome = 'Oi'
+    this.nome = 'Terra';
   }
 }
