@@ -9,9 +9,9 @@ import { Planeta } from './model/planeta';
 export class AppComponent {
 
   planeta: Planeta = {
-    nome: 'Terra',
+    nome: '',
     temperatura: 15,
-    diametro: 15,
+    diametro: 12.742,
     dia: 24,
     ano: 365,
     curiosidade: 'Daqui há 140 milhões de anos, um dia durará 25 horas!'
