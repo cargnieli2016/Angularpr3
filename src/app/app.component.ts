@@ -15,4 +15,7 @@ export class AppComponent {
   curiosidade: string = 'Daqui há 140 milhões de anos, um dia durará 25 horas!';
   
   ngOnInit() {}
+  ClicouNoPlaneta(){
+    this.nome = 'Oi'
+  }
 }
