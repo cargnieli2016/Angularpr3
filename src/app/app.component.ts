@@ -8,17 +8,18 @@ import { Planeta } from './model/planeta';
 })
 export class AppComponent {
 
-  nome: string = '';
-  temperatura: number = 15;
-  diametro: number = 12.742;
-  dia: number = 24;
-  ano : number = 365;
-  curiosidade: string = 'Daqui há 140 milhões de anos, um dia durará 25 horas!';
+  planeta: Planeta = {
+    nome: 'Terra',
+    temperatura: 15,
+    diametro: 15,
+    dia: 24,
+    ano: 365,
+    curiosidade: 'Daqui há 140 milhões de anos, um dia durará 25 horas!'
 
-  planeta: Planeta;
+  };
   
   ngOnInit() {}
   ClicouNoPlaneta(){
-    this.nome = 'Terra';
+    this.planeta.nome = 'Terra';
   }
 }

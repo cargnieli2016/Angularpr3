@@ -1,18 +1,18 @@
-<div class="div-painel" *ngIf="nome">
+<div class="div-painel" *ngIf="planeta.nome">
   <img
     class="imagem-planeta"
     src="https://drive.google.com/uc?id=1C7HmsPUqT8TkVuZ9OJlQrtG1L_Ho0LH3"
     alt="Planeta Terra"
   />
-  <p>Nome: <strong> {{nome}}</strong></p>
-  <p>Temperatura média: <strong>{{temperatura}}ºC</strong></p>
-  <p>Diâmetro: <strong>{{diametro}} km</strong></p>
-  <p>Dia: <strong> {{dia}}</strong> | ano: <strong>{{ano}}</strong></p>
-  <p>Curiosidade: {{curiosidade}}</p>
+  <p>Nome: <strong> {{ planeta.nome }}</strong></p>
+  <p>Temperatura média: <strong>{{ planeta.temperatura }}ºC</strong></p>
+  <p>Diâmetro: <strong>{{ planeta.diametro }} km</strong></p>
+  <p>Dia: <strong> {{ planeta.dia }}</strong> | ano: <strong>{{planeta.ano}}</strong></p>
+  <p>Curiosidade: {{ planeta.curiosidade }}</p>
 </div>
 
 <div>
-<img
+<img 
 (click) = "ClicouNoPlaneta()"
 class="imagem-planeta"
 src="https://drive.google.com/uc?id=1C7HmsPUqT8TkVuZ9OJlQrtG1L_Ho0LH3"
