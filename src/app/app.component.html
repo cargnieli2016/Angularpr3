@@ -1,23 +1,23 @@
-<div class="div-painel" *ngIf="planeta.nome">
+<div class="div-painel" *ngIf="planetaSelecionado">
 
-  <img class="imagem-planeta" src="https://drive.google.com/uc?id=1C7HmsPUqT8TkVuZ9OJlQrtG1L_Ho0LH3" alt="Planeta Terra"/>
+  <img class="imagem-planeta" [src]="planetaSelecionado.imagem" alt="Planeta Terra"/>
 
-  <p>Nome: <strong> {{ planeta.nome }}</strong></p>
-  <p>Temperatura média: <strong>{{ planeta.temperatura }}ºC</strong></p>
-  <p>Diâmetro: <strong>{{ planeta.diametro }} km</strong></p>
-  <p>Dia: <strong> {{ planeta.dia }}</strong> | ano: <strong>{{ planeta.ano }}</strong></p>
-  <p>Curiosidade: {{ planeta.curiosidade }}</p>
+  <p>Nome: <strong> {{ planetaSelecionado.nome }}</strong></p>
+  <p>Temperatura média: <strong>{{ planetaSelecionado.temperatura }}ºC</strong></p>
+  <p>Diâmetro: <strong>{{ planetaSelecionado.diametro }} km</strong></p>
+  <p>Dia: <strong> {{ planetaSelecionado.dia }}</strong> | ano: <strong>{{ planetaSelecionado.ano }}</strong></p>
+  <p>Curiosidade: {{ planetaSelecionado.curiosidade }}</p>
 </div>
 
-<div>
+<div *ngFor='let planeta of planetas'>
+
 <img 
-(click) = "ClicouNoPlaneta()"
+(click) = "ClicouNoPlaneta(planeta)"
 class="imagem-planeta"
-src="https://drive.google.com/uc?id=1C7HmsPUqT8TkVuZ9OJlQrtG1L_Ho0LH3"
+[src]="planeta.imagem"
 alt="Planeta Terra"/>
 </div>
 
-<div *ngFor='let palavra of palavras'>
-<p>{{palavra}}</p>
-</div>
+
+
 
