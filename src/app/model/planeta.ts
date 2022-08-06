@@ -6,4 +6,5 @@ diametro: number;
 dia: number;
 ano: number;
 curiosidade: string;
+tamanho?: string;
 }
