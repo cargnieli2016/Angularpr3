@@ -14,3 +14,87 @@ p {
   float: left;
   margin-right: 10px;
 }
+
+.animation-0 {
+  animation: animation-0 7s infinite alternate;
+}
+
+.animation-1 {
+  animation: animation-1 20s infinite alternate;
+}
+
+.animation-2 {
+  animation: animation-2 15s infinite alternate;
+}
+
+.animation-3 {
+  animation: animation-3 7s infinite alternate;
+}
+
+.animation-4 {
+  animation: animation-4 30s infinite alternate;
+}
+
+.animation-5 {
+  animation: animation-5 24s infinite alternate;
+}
+
+@keyframes animation-0 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(10px, 40px);
+  }
+}
+
+@keyframes animation-1 {
+  0% {
+    transform: translate(0, 0) scale(0.6);
+  }
+
+  100% {
+    transform: translate(60px, 110px) scale(1);
+  }
+}
+
+@keyframes animation-2 {
+  0% {
+    transform: translate(0, 0) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-60px, 200px) scale(0.8);
+  }
+}
+
+@keyframes animation-3 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-40px, 30px);
+  }
+}
+
+@keyframes animation-4 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(40px, -20px);
+  }
+}
+
+@keyframes animation-5 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(80px, 80px);
+  }
+}
