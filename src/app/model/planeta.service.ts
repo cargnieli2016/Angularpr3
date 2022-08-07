@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { ChanceDeVidaPlanetaService } from "./chance-de-vida-planeta.service";
 import { Planeta } from "./planeta";
 import { TamanhoPlanetaService } from "./tamanho-planeta.service";
 
@@ -75,7 +76,8 @@ export class PlanetaService {
   ];
 
   constructor(
-    private tamanhoPlanetaService: TamanhoPlanetaService
+    private tamanhoPlanetaService: TamanhoPlanetaService,
+    private chanceService: ChanceDeVidaPlanetaService
   ){}
 
 
@@ -84,9 +86,17 @@ export class PlanetaService {
 
     this.planetas = this.planetas.map ((planeta) => {
       planeta.tamanho = this.tamanhoPlanetaService.OTamanhoDoPlanetaEh(planeta);
+
+      planeta.chanceDeVida = this.chanceService.temChance(planeta);
+
       planeta.tamanho = 'Grande'
       return planeta;
     });
+
+
+    //Chance de vida
+   // temperatura -60 e 20
+    // se sim Alta se não Baixa
 
     return this.planetas;
   }

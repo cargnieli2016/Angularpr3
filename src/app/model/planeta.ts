@@ -7,4 +7,5 @@ dia: number;
 ano: number;
 curiosidade: string;
 tamanho?: string;
+chanceDeVida?: string;
 }
